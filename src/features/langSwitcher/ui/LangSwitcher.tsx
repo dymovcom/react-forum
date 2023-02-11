@@ -1,0 +1,18 @@
+import { useTranslation } from "react-i18next";
+import { Button } from "shared/ui/button";
+
+export const LangSwitcher = (): JSX.Element => {
+  const { t, i18n } = useTranslation();
+
+  const toggleLang = () => {
+    i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+  };
+
+  return (
+    <div>
+      <Button onClick={toggleLang}>
+        {t("lang_switcher")}
+      </Button>
+    </div>
+  );
+};

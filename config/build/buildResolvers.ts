@@ -1,7 +1,12 @@
-import { ResolveOptions } from "webpack";
+/* eslint-disable import/no-extraneous-dependencies */
 
-export const buildResolvers = (): ResolveOptions => {
-  return {
-    extensions: [".tsx", ".ts", ".js"],
-  }
-}
+import { ResolveOptions } from "webpack";
+import { IBuildOptions } from "./types/config";
+
+export const buildResolvers = (options: IBuildOptions): ResolveOptions => ({
+  extensions: [".tsx", ".ts", ".js"],
+  preferAbsolute: true,
+  modules: [options.paths.src, "node_modules"],
+  alias: {},
+  mainFiles: ["index"],
+});

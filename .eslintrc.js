@@ -18,6 +18,7 @@ module.exports = {
   plugins: [
     "react",
     "@typescript-eslint",
+    "i18next",
   ],
   rules: {
     quotes: ["error", "double"],
@@ -33,6 +34,7 @@ module.exports = {
     "import/extensions": "off",
     "no-shadow": "off",
     "no-underscore-dangle": "off",
+    "i18next/no-literal-string": ["error", { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true,

@@ -1,3 +1,6 @@
 {
-  "lang_switcher": "Switch language"
+  "lang_switcher": "Switch language",
+  "main_link": "Главная",
+  "about_link": "О нас",
+  "sidebar_toggle": "Свернуть"
 }

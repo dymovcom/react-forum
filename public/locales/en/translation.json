@@ -1,3 +1,6 @@
 {
-  "lang_switcher": "Переключить язык"
+  "lang_switcher": "Переключить язык",
+  "main_link": "Main page",
+  "about_link": "About as",
+  "sidebar_toggle": "Collapse"
 }

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, FC } from "react";
 import { classNames } from "shared/lib/classNames";
 import classes from "./Button.module.scss";
 
@@ -11,7 +11,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
 }
 
-export const Button = (props: ButtonProps): JSX.Element => {
+export const Button: FC<ButtonProps> = (props) => {
   const {
     children, className, variant = "primary", ...otherProps
   } = props;

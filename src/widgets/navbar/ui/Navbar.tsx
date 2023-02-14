@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames";
 import { AppLink } from "shared/ui/appLink";
@@ -9,13 +10,19 @@ interface NavbarProps {
   className?: string;
 }
 
-export const Navbar = ({ className }: NavbarProps): JSX.Element => {
+export const Navbar: FC<NavbarProps> = ({ className }) => {
   const { t } = useTranslation();
 
   return (
     <div className={classNames(classes.navbar, className)}>
       <div className={classes.links}>
-        <AppLink variant="secondary" to="/" className={classes.mainLink}>{t("main_link")}</AppLink>
+        <AppLink
+          variant="secondary"
+          to="/"
+          className={classes.mainLink}
+        >
+          {t("main_link")}
+        </AppLink>
         <AppLink variant="secondary" to="/about">{t("about_link")}</AppLink>
       </div>
       <div className={classes.switchers}>

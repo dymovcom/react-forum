@@ -1,7 +1,11 @@
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
+/* eslint-disable import/no-extraneous-dependencies */
+
+import { Configuration as DevServerConfiguration } from "webpack-dev-server";
 import { IBuildOptions } from "./types/config";
 
-export const buildDevServer = (options: IBuildOptions): DevServerConfiguration => ({
+export const buildDevServer = (
+  options: IBuildOptions,
+): DevServerConfiguration => ({
   port: options.port,
   open: true,
   historyApiFallback: true,

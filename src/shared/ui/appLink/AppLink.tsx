@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import { ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import { Link, LinkProps } from "react-router-dom";
 import { classNames } from "shared/lib/classNames";
 import classes from "./AppLink.module.scss";
@@ -13,7 +13,7 @@ interface AppLinkProps extends LinkProps {
   variant?: AppLinkVariant;
 }
 
-export const AppLink = (props: AppLinkProps): JSX.Element => {
+export const AppLink: FC<AppLinkProps> = (props) => {
   const {
     children, to, className, variant = "primary", ...otherProps
   } = props;

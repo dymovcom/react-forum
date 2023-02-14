@@ -2,5 +2,7 @@
   "lang_switcher": "Переключить язык",
   "main_link": "Main page",
   "about_link": "About as",
-  "sidebar_toggle": "Collapse"
+  "sidebar_toggle": "Collapse",
+  "page_error": "An unexpected error has occurred",
+  "page_error_refresh_btn": "Refresh the page"
 }

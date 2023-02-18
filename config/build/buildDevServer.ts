@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 import { Configuration as DevServerConfiguration } from "webpack-dev-server";
 import { IBuildOptions } from "./types/config";
 

@@ -1,11 +1,8 @@
 /* eslint-disable no-unused-vars */
 
 declare module "*.scss" {
-  interface IClassNames {
-    [className: string]: string;
-  }
-  const classNames: IClassNames;
-  export = classNames;
+  const content: Record<string, string>;
+  export default content;
 }
 
 declare module "*.png";

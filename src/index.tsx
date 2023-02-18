@@ -1,18 +1,18 @@
 import { ErrorBoundary } from "app/providers/errorBoundary";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { App } from "app";
 import { ThemeProvider } from "app/providers/ThemeProvider";
 import "shared/config/i18n/i18n";
 
-render(
-  (
-    <BrowserRouter>
-      <ErrorBoundary>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </ErrorBoundary>
-    </BrowserRouter>
-  ), document.getElementById("root"),
-);
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render((
+  <BrowserRouter>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </ErrorBoundary>
+  </BrowserRouter>
+));

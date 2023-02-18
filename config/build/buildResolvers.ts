@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 import { ResolveOptions } from "webpack";
 import { IBuildOptions } from "./types/config";
 

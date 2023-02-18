@@ -40,6 +40,21 @@ module.exports = {
     "no-underscore-dangle": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
     "max-len": ["error", { code: 80, ignoreComments: true }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: [
+          "./config/**/*",
+          "test.{ts,tsx}",
+          "test-*.{ts,tsx}",
+          "**/*.{test,spec}.{ts,tsx}",
+          "**/jest.config.ts",
+          "**/setupTests.ts",
+          "**/renderWithTranslation.tsx",
+        ],
+        optionalDependencies: false,
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,

@@ -11,9 +11,7 @@ export const LangSwitcher: FC = () => {
 
   return (
     <div>
-      <Button onClick={toggleLang}>
-        {t("lang_switcher")}
-      </Button>
+      <Button onClick={toggleLang}>{t("lang_switcher")}</Button>
     </div>
   );
 };

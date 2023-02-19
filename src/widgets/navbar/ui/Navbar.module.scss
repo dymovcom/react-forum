@@ -1,23 +1,23 @@
 .navbar {
+  display: flex;
   width: 100%;
   height: var(--navbar-height);
-  background-color: var(--inverted-bg-color);
-  display: flex;
   align-items: center;
   padding: 20px;
+  background-color: var(--inverted-bg-color);
 }
 
 .links {
   margin-left: auto;
 }
 
-.mainLink {
+.main-link {
   margin-right: 16px;
 }
 
 .switchers {
   display: flex;
   align-items: center;
-  gap: 24px;
   margin-left: 24px;
+  gap: 24px;
 }

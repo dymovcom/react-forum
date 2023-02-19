@@ -12,11 +12,9 @@ export const PageError: FC = () => {
   };
 
   return (
-    <div className={classes.PageError}>
+    <div className={classes["page-error"]}>
       <p>{t("page_error")}</p>
-      <Button onClick={reloadPage}>
-        {t("page_error_refresh_btn")}
-      </Button>
+      <Button onClick={reloadPage}>{t("page_error_refresh_btn")}</Button>
     </div>
   );
 };

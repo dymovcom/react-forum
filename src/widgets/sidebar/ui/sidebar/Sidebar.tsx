@@ -15,15 +15,11 @@ export const Sidebar: FC = () => {
   return (
     <div
       data-testid="sidebar"
-      className={classNames(
-        classes.Sidebar,
-        { [classes.collapsed]: collapsed },
-      )}
+      className={classNames(classes.sidebar, {
+        [classes.collapsed]: collapsed,
+      })}
     >
-      <Button
-        data-testid="sidebar-toggle"
-        onClick={collapsedToggle}
-      >
+      <Button data-testid="sidebar-toggle" onClick={collapsedToggle}>
         {t("sidebar_toggle")}
       </Button>
     </div>

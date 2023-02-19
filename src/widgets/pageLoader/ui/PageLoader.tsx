@@ -3,7 +3,7 @@ import { Loader } from "shared/ui/loader/Loader";
 import classes from "./PageLoader.module.scss";
 
 export const PageLoader: FC = () => (
-  <div className={classes.PageLoader}>
+  <div className={classes["page-loader"]}>
     <Loader />
   </div>
 );

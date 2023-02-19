@@ -16,14 +16,12 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
   return (
     <div className={classNames(classes.navbar, className)}>
       <div className={classes.links}>
-        <AppLink
-          variant="secondary"
-          to="/"
-          className={classes.mainLink}
-        >
+        <AppLink variant="secondary" to="/" className={classes["main-link"]}>
           {t("main_link")}
         </AppLink>
-        <AppLink variant="secondary" to="/about">{t("about_link")}</AppLink>
+        <AppLink variant="secondary" to="/about">
+          {t("about_link")}
+        </AppLink>
       </div>
       <div className={classes.switchers}>
         <ThemeSwitcher />

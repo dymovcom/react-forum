@@ -1,6 +1,4 @@
-import {
-  ErrorInfo, PureComponent, ReactNode, Suspense,
-} from "react";
+import { ErrorInfo, PureComponent, ReactNode, Suspense } from "react";
 import { PageError } from "widgets/pageError";
 import { PageLoader } from "widgets/pageLoader";
 
@@ -12,8 +10,7 @@ interface ErrorBoundaryState {
   hasError: boolean;
 }
 
-export class ErrorBoundary
-  extends PureComponent<ErrorBoundaryProps, ErrorBoundaryState> {
+export class ErrorBoundary extends PureComponent<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };

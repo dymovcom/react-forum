@@ -7,6 +7,8 @@ module.exports = {
   extends: [
     "plugin:react/recommended",
     "airbnb",
+    "plugin:storybook/recommended",
+    "plugin:prettier/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -16,18 +18,11 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: [
-    "react",
-    "@typescript-eslint",
-    "i18next",
-  ],
+  plugins: ["react", "@typescript-eslint", "i18next", "prettier"],
   rules: {
     quotes: ["error", "double"],
     "react/function-component-definition": "off",
-    "react/jsx-filename-extension": [
-      2,
-      { extensions: [".js", ".jsx", ".tsx"] },
-    ],
+    "react/jsx-filename-extension": [2, { extensions: [".js", ".jsx", ".tsx"] }],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "no-unused-vars": "off",
@@ -39,7 +34,7 @@ module.exports = {
     "no-shadow": "off",
     "no-underscore-dangle": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
-    "max-len": ["error", { code: 80, ignoreComments: true }],
+    "max-len": ["error", { code: 100, ignoreComments: true }],
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -51,6 +46,8 @@ module.exports = {
           "**/jest.config.ts",
           "**/setupTests.ts",
           "**/renderWithTranslation.tsx",
+          "**/*.stories.{ts,tsx}",
+          "./src/shared/config/storybook/**/*",
         ],
         optionalDependencies: false,
       },

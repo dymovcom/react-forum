@@ -1,4 +1,6 @@
-export const classNames = (...params: (string | Record<string, boolean>)[]): string => {
+export const classNames = (
+  ...params: (string | Record<string, boolean>)[]
+): string => {
   const classes: string[] = [];
 
   params.forEach((param) => {

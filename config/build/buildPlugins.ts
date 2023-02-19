@@ -4,7 +4,10 @@ import webpack from "webpack";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import { IBuildOptions } from "./types/config";
 
-export const buildPlugins = ({ paths, isDev }: IBuildOptions): webpack.WebpackPluginInstance[] => [
+export const buildPlugins = ({
+  paths,
+  isDev,
+}: IBuildOptions): webpack.WebpackPluginInstance[] => [
   new webpack.ProgressPlugin(),
   new HTMLWebpackPlugin({
     template: paths.html,

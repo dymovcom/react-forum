@@ -48,7 +48,7 @@ module.exports = {
           "**/*.{test,spec}.{ts,tsx}",
           "**/jest.config.ts",
           "**/setupTests.ts",
-          "**/renderWithTranslation.tsx",
+          "**/componentRender.tsx",
           "**/*.stories.{ts,tsx}",
           "./src/shared/config/storybook/**/*",
         ],

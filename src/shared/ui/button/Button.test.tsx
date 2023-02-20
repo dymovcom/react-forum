@@ -9,7 +9,7 @@ describe("Button", () => {
 
   test("with default theme", () => {
     render(<Button>TEST</Button>);
-    expect(screen.getByText("TEST")).toHaveClass("primary");
+    expect(screen.getByText("TEST")).toHaveClass("contained");
   });
 
   test("with clear theme", () => {
@@ -17,8 +17,23 @@ describe("Button", () => {
     expect(screen.getByText("TEST")).toHaveClass("clear");
   });
 
-  test("with primary theme", () => {
-    render(<Button variant="primary">TEST</Button>);
-    expect(screen.getByText("TEST")).toHaveClass("primary");
+  test("with contained theme", () => {
+    render(<Button variant="contained">TEST</Button>);
+    expect(screen.getByText("TEST")).toHaveClass("contained");
+  });
+
+  test("with s size", () => {
+    render(<Button size="s">TEST</Button>);
+    expect(screen.getByText("TEST")).toHaveClass("s");
+  });
+
+  test("with m size", () => {
+    render(<Button size="m">TEST</Button>);
+    expect(screen.getByText("TEST")).toHaveClass("m");
+  });
+
+  test("with l size", () => {
+    render(<Button size="l">TEST</Button>);
+    expect(screen.getByText("TEST")).toHaveClass("l");
   });
 });

@@ -11,10 +11,18 @@ export default {
 /* eslint-disable react/jsx-props-no-spreading */
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Contained = Template.bind({});
+Contained.args = {
   children: "Button",
+  variant: "contained",
 };
+
+export const ContainedDark = Template.bind({});
+ContainedDark.args = {
+  children: "Button",
+  variant: "contained",
+};
+ContainedDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Clear = Template.bind({});
 Clear.args = {
@@ -41,3 +49,21 @@ OutlineDark.args = {
   variant: "outline",
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const SizeS = Template.bind({});
+SizeS.args = {
+  children: "Button",
+  size: "s",
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+  children: "Button",
+  size: "m",
+};
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+  children: "Button",
+  size: "l",
+};

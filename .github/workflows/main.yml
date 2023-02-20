@@ -22,9 +22,12 @@ jobs:
         run: npm run lint
       - name: Unit testing
         run: npm run test:unit
+        if: always()
       - name: Build storybook
+        if: always()
         run: npm run storybook:build
       - name: UI testing
+        if: always()
         run: npm run test:ui:ci
       - name: Build production project
         run: npm run build:prod

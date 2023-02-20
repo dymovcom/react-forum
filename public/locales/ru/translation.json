@@ -1,8 +1,7 @@
 {
-  "lang_switcher": "Switch language",
+  "lang_switcher": "Переключить язык",
   "main_link": "Главная",
   "about_link": "О нас",
-  "sidebar_toggle": "Свернуть",
   "page_error": "Произошла непредвиденная ошибка",
   "page_error_refresh_btn": "Обновить страницу"
 }

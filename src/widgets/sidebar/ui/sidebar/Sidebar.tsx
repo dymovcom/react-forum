@@ -1,7 +1,11 @@
 import { FC, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { routePath } from "shared/config/routeConfig/routeConfig";
 import { classNames } from "shared/lib/classNames";
+import { AppLink } from "shared/ui/appLink";
 import { Button } from "shared/ui/button";
+import MainIcon from "shared/assets/icons/main-icon.svg";
+import AboutIcon from "shared/assets/icons/about-icon.svg";
 import classes from "./Sidebar.module.scss";
 
 export const Sidebar: FC = () => {
@@ -19,8 +23,36 @@ export const Sidebar: FC = () => {
         [classes.collapsed]: collapsed,
       })}
     >
-      <Button data-testid="sidebar-toggle" onClick={collapsedToggle}>
-        {t("sidebar_toggle")}
+      <div className={classes.links}>
+        <AppLink
+          className={classes.link}
+          variant="secondary"
+          to={routePath.main}
+        >
+          <MainIcon className={classes["link-icon"]} />
+          <span className={classNames(classes["link-text"])}>
+            {t("main_link")}
+          </span>
+        </AppLink>
+        <AppLink
+          className={classes.link}
+          variant="secondary"
+          to={routePath.about}
+        >
+          <AboutIcon className={classes["link-icon"]} />
+          <span className={classNames(classes["link-text"])}>
+            {t("about_link")}
+          </span>
+        </AppLink>
+      </div>
+      <Button
+        data-testid="sidebar-toggle"
+        className={classes["toggle-button"]}
+        fullWidth
+        size="m"
+        onClick={collapsedToggle}
+      >
+        {collapsed ? ">" : "<"}
       </Button>
     </div>
   );

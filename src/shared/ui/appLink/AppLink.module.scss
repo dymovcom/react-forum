@@ -1,11 +1,18 @@
 .app-link {
-  color: var(--primary-color);
+  font-size: var(--size-text-m);
+  line-height: var(--line-height-text-m);
+  text-decoration: none;
+  transition: .3s ease;
+
+  &:hover {
+    color: var(--color-typo-link-hover);
+  }
 }
 
 .primary {
-  color: var(--primary-color);
+  color: var(--color-typo-link);
 }
 
 .secondary {
-  color: var(--inverted-primary-color);
+  color: var(--color-typo-link-minor);
 }

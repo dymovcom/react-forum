@@ -1,6 +1,4 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Theme } from "app/providers/ThemeProvider";
-import { ThemeDecorator } from "shared/config/storybook/decorators/ThemeDecorator";
 import { Button } from "./Button";
 
 export default {
@@ -11,44 +9,35 @@ export default {
 /* eslint-disable react/jsx-props-no-spreading */
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Contained = Template.bind({});
-Contained.args = {
+export const VariantPrimary = Template.bind({});
+VariantPrimary.args = {
   children: "Button",
-  variant: "contained",
+  variant: "primary",
 };
 
-export const ContainedDark = Template.bind({});
-ContainedDark.args = {
+export const VariantSecondary = Template.bind({});
+VariantSecondary.args = {
   children: "Button",
-  variant: "contained",
+  variant: "secondary",
 };
-ContainedDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const Clear = Template.bind({});
-Clear.args = {
+export const VariantClear = Template.bind({});
+VariantClear.args = {
   children: "Button",
   variant: "clear",
 };
 
-export const ClearDark = Template.bind({});
-ClearDark.args = {
+export const VariantGhost = Template.bind({});
+VariantGhost.args = {
   children: "Button",
-  variant: "clear",
-};
-ClearDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Outline = Template.bind({});
-Outline.args = {
-  children: "Button",
-  variant: "outline",
+  variant: "ghost",
 };
 
-export const OutlineDark = Template.bind({});
-OutlineDark.args = {
+export const SizeXS = Template.bind({});
+SizeXS.args = {
   children: "Button",
-  variant: "outline",
+  size: "xs",
 };
-OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const SizeS = Template.bind({});
 SizeS.args = {
@@ -66,4 +55,52 @@ export const SizeL = Template.bind({});
 SizeL.args = {
   children: "Button",
   size: "l",
+};
+
+export const FormDefault = Template.bind({});
+FormDefault.args = {
+  children: "Button",
+  form: "default",
+};
+
+export const FormBrick = Template.bind({});
+FormBrick.args = {
+  children: "Button",
+  form: "brick",
+};
+
+export const FormRound = Template.bind({});
+FormRound.args = {
+  children: "Button",
+  form: "round",
+};
+
+export const FormBrickRound = Template.bind({});
+FormBrickRound.args = {
+  children: "Button",
+  form: "brick-round",
+};
+
+export const FormRoundBrick = Template.bind({});
+FormRoundBrick.args = {
+  children: "Button",
+  form: "round-brick",
+};
+
+export const FormBrickDefault = Template.bind({});
+FormBrickDefault.args = {
+  children: "Button",
+  form: "brick-default",
+};
+export const FormDefaultBrick = Template.bind({});
+FormDefaultBrick.args = {
+  children: "Button",
+  form: "default-brick",
+};
+
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+  children: "Button",
+  size: "l",
+  fullWidth: true,
 };

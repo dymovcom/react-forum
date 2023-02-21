@@ -1,46 +1,70 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import { ButtonHTMLAttributes, FC } from "react";
+import { FC, MouseEvent } from "react";
 import { classNames } from "shared/lib/classNames";
+import { forwardRefWithAs } from "shared/lib/forwardRefWithAs";
+import {
+  buttonPropFormDefault,
+  ButtonProps,
+  buttonPropSizeDefault,
+  buttonPropVariantDefault,
+} from "shared/ui/button/Button.interface";
+import { Loader } from "shared/ui/loader";
 import classes from "./Button.module.scss";
 
-const buttonVariant = ["clear", "contained", "outline"] as const;
-type ButtonVariant = (typeof buttonVariant)[number];
+export const Button: FC<ButtonProps> = forwardRefWithAs<ButtonProps, "button">(
+  (props, ref) => {
+    const {
+      variant = buttonPropVariantDefault,
+      form = buttonPropFormDefault,
+      size = buttonPropSizeDefault,
+      as = "button",
+      className,
+      loading,
+      disabled,
+      fullWidth,
+      title,
+      tabIndex,
+      onlyIcon,
+      children,
+      onClick,
+      ...otherProps
+    } = props;
 
-const buttonSize = ["s", "m", "l"] as const;
-type ButtonSize = (typeof buttonSize)[number];
+    const onClickHandler = (event: MouseEvent<HTMLElement>) => {
+      if (!disabled && !loading && onClick) {
+        onClick(event);
+      }
+    };
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  fullWidth?: boolean;
-}
+    const Tag = as as string;
 
-export const Button: FC<ButtonProps> = (props) => {
-  const {
-    children,
-    className,
-    variant = "contained",
-    size = "m",
-    fullWidth,
-    ...otherProps
-  } = props;
-
-  return (
-    <button
-      type="button"
-      className={classNames(
-        classes.button,
-        classes[variant],
-        classes[size],
-        {
-          [classes["full-width"]]: fullWidth,
-        },
-        className,
-      )}
-      {...otherProps}
-    >
-      {children}
-    </button>
-  );
-};
+    return (
+      <Tag
+        {...otherProps}
+        className={classNames(
+          classes.button,
+          classes[variant],
+          classes[size],
+          classes[form],
+          {
+            [classes["full-width"]]: fullWidth,
+            [classes["only-icon"]]: onlyIcon,
+            [classes.disabled]: disabled,
+            [classes.loading]: loading,
+          },
+          className,
+        )}
+        type="button"
+        tabIndex={tabIndex}
+        title={title}
+        ref={ref}
+        {...(Tag === "button" ? { disabled: disabled || loading } : {})}
+        onClick={onClickHandler}
+      >
+        {children}
+        {loading && <Loader className={classes.loader} size="s" />}
+      </Tag>
+    );
+  },
+);

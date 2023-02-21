@@ -24,21 +24,13 @@ export const Sidebar: FC = () => {
       })}
     >
       <div className={classes.links}>
-        <AppLink
-          className={classes.link}
-          variant="secondary"
-          to={routePath.main}
-        >
+        <AppLink className={classes.link} to={routePath.main}>
           <MainIcon className={classes["link-icon"]} />
           <span className={classNames(classes["link-text"])}>
             {t("main_link")}
           </span>
         </AppLink>
-        <AppLink
-          className={classes.link}
-          variant="secondary"
-          to={routePath.about}
-        >
+        <AppLink className={classes.link} to={routePath.about}>
           <AboutIcon className={classes["link-icon"]} />
           <span className={classNames(classes["link-text"])}>
             {t("about_link")}
@@ -49,7 +41,7 @@ export const Sidebar: FC = () => {
         data-testid="sidebar-toggle"
         className={classes["toggle-button"]}
         fullWidth
-        size="m"
+        form="brick"
         onClick={collapsedToggle}
       >
         {collapsed ? ">" : "<"}

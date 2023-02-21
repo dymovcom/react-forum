@@ -1,6 +1,4 @@
 import { StyleDecorator } from "../../src/shared/config/storybook/decorators/StyleDecorator";
-import { ThemeDecorator } from "../../src/shared/config/storybook/decorators/ThemeDecorator";
-import { Theme } from "../../src/app/providers/ThemeProvider";
 import { RouterDecorator } from "../../src/shared/config/storybook/decorators/RouterDecorator";
 
 export const parameters = {
@@ -11,10 +9,13 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  themes: {
+    default: "light",
+    list: [
+      { name: "light", class: "light-theme", color: "#ffffff" },
+      { name: "dark", class: "dark-theme", color: "#22272B" },
+    ],
+  },
 };
 
-export const decorators = [
-  StyleDecorator,
-  ThemeDecorator(Theme.LIGHT),
-  RouterDecorator,
-];
+export const decorators = [StyleDecorator, RouterDecorator];

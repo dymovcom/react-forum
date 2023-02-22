@@ -11,7 +11,7 @@ export const LangSwitcher: FC = () => {
 
   return (
     <div>
-      <Button size="s" onClick={toggleLang}>
+      <Button variant="ghost" size="s" onClick={toggleLang}>
         {t("lang_switcher")}
       </Button>
     </div>

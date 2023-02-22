@@ -4,7 +4,6 @@
     "stylelint-config-idiomatic-order"
   ],
   "rules": {
-    "color-hex-length": "long",
-    "color-hex-case": "lower"
+    "color-hex-length": "long"
   }
 }

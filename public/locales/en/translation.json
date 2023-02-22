@@ -3,5 +3,6 @@
   "main_link": "Main page",
   "about_link": "About as",
   "page_error": "An unexpected error has occurred",
-  "page_error_refresh_btn": "Refresh the page"
+  "page_error_refresh_btn": "Refresh the page",
+  "login_btn": "Login"
 }

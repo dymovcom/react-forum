@@ -41,6 +41,7 @@ export const Sidebar: FC = () => {
         data-testid="sidebar-toggle"
         className={classes["toggle-button"]}
         fullWidth
+        variant="ghost"
         form="brick"
         onClick={collapsedToggle}
       >

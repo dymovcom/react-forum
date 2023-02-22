@@ -3,5 +3,6 @@
   "main_link": "Главная",
   "about_link": "О нас",
   "page_error": "Произошла непредвиденная ошибка",
-  "page_error_refresh_btn": "Обновить страницу"
+  "page_error_refresh_btn": "Обновить страницу",
+  "login_btn": "Войти"
 }

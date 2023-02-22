@@ -18,7 +18,13 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "i18next", "prettier"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "i18next",
+    "prettier",
+    "react-hooks",
+  ],
   rules: {
     quotes: ["error", "double"],
     "react/function-component-definition": "off",
@@ -55,9 +61,19 @@ module.exports = {
         optionalDependencies: false,
       },
     ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
   globals: {
     JSX: true,
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ["**/src/**/*.{test,stories}.{ts,tsx}"],
+      rules: {
+        "i18next/no-literal-string": "off",
+      },
+    },
+  ],
 };

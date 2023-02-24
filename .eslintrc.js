@@ -57,6 +57,7 @@ module.exports = {
           "**/componentRender.tsx",
           "**/*.stories.{ts,tsx}",
           "./src/shared/config/storybook/**/*",
+          "./json-server/**/*",
         ],
         optionalDependencies: false,
       },

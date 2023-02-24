@@ -1,7 +1,7 @@
 import i18n from "i18next";
-import * as process from "process";
 import { initReactI18next } from "react-i18next";
 import Backend from "i18next-http-backend";
+import { isDev } from "shared/lib/isDev";
 
 i18n
   .use(Backend)
@@ -9,7 +9,7 @@ i18n
   .init({
     lng: "ru",
     fallbackLng: "ru",
-    debug: !process.env.mode,
+    debug: isDev,
     load: "languageOnly",
     interpolation: {
       escapeValue: false,

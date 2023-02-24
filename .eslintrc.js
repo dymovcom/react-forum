@@ -75,5 +75,9 @@ module.exports = {
         "i18next/no-literal-string": "off",
       },
     },
+    {
+      files: ["src/**/*Slice.ts"],
+      rules: { "no-param-reassign": ["error", { props: false }] },
+    },
   ],
 };

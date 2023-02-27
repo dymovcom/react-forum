@@ -4,7 +4,7 @@ import {
   PortalProvider,
   usePortalContext,
 } from "shared/config/portalProvider/PortalContext";
-import { mergeRefs } from "shared/ui/portal/merge";
+import { useForkRef } from "shared/hooks/useForkRef";
 
 interface PortalProps extends HTMLProps<HTMLDivElement> {
   container?: HTMLElement;
@@ -47,7 +47,7 @@ export const Portal = forwardRef<HTMLDivElement, PortalProps>((props, ref) => {
   return createPortal(
     <PortalProvider zIndex={zIndex}>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <div ref={mergeRefs([portalRef, ref])} style={style} {...otherProps}>
+      <div ref={useForkRef([portalRef, ref])} style={style} {...otherProps}>
         {children}
       </div>
     </PortalProvider>,

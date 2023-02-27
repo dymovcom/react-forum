@@ -3,7 +3,9 @@ import { ReactElement, Ref, RefAttributes } from "react";
 export type PropsWithAsAttributes<
   Props,
   As extends keyof JSX.IntrinsicElements,
-> = Props & { as?: As } & Omit<JSX.IntrinsicElements[As], keyof Props>;
+> = Props & {
+  as?: As;
+} & Omit<JSX.IntrinsicElements[As], keyof Props>;
 
 export type ComponentWithAs<
   Props,

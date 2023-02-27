@@ -35,7 +35,7 @@ export const createIcon = ({ m, s, xs, name }: CreateIconArgs) => {
     const Svg = getSvgBySize(props.size, m, s, xs);
 
     return (
-      <Icon {...props} className={classNames(name, props.className)}>
+      <Icon {...props} className={classNames(name, props.className)} ref={ref}>
         <Svg className="svg-icon" />
       </Icon>
     );

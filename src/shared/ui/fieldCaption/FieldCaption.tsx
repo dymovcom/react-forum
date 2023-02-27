@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { forwardRefWithAs } from "shared/lib/forwardRefWithAs";
 import { Text } from "shared/ui/text";
 

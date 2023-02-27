@@ -190,7 +190,7 @@ const TextFieldRender = <TYPE extends string>(
     if (type === "password" && inputRef.current) {
       inputRef.current.selectionStart = valueRef.current?.length || 0;
     }
-  }, [passwordVisible]);
+  }, [passwordVisible, type, valueRef]);
 
   return (
     <div

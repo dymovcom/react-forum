@@ -80,5 +80,9 @@ module.exports = {
       files: ["src/**/*Slice.ts"],
       rules: { "no-param-reassign": ["error", { props: false }] },
     },
+    {
+      files: ["src/shared/icons/**/*"],
+      rules: { "react/jsx-props-no-spreading": "off" },
+    },
   ],
 };

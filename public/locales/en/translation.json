@@ -4,5 +4,8 @@
   "about_link": "About as",
   "page_error": "An unexpected error has occurred",
   "page_error_refresh_btn": "Refresh the page",
-  "login_btn": "Login"
+  "login_btn": "Login",
+  "login_form_submit": "Login",
+  "username_field_label": "Username",
+  "password_field_label": "Password"
 }

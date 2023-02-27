@@ -1,3 +1,4 @@
+import { LoginModal } from "features/authByUsername";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { routePath } from "shared/config/routeConfig/routeConfig";
@@ -7,7 +8,6 @@ import { LangSwitcher } from "features/langSwitcher";
 import { ThemeSwitcher } from "features/themeSwitcher";
 import { AppLink } from "shared/ui/appLink";
 import { Button } from "shared/ui/button";
-import { Modal } from "shared/ui/modal";
 import classes from "./Header.module.scss";
 
 interface HeaderProps {
@@ -31,14 +31,7 @@ export const Header: FC<HeaderProps> = ({ className }) => {
       <Button variant="primary" size="s" onClick={setIsOpen.on}>
         {t("login_btn")}
       </Button>
-      {/* todo delete it */}
-      {/* eslint-disable-next-line i18next/no-literal-string */}
-      <Modal isOpen={isOen} onClickOutside={setIsOpen.off}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum cumque
-        debitis fugiat illum, inventore praesentium quisquam sint unde vel.
-        Alias nesciunt nobis omnis quidem temporibus? Asperiores eaque quod
-        ratione.
-      </Modal>
+      <LoginModal isOpen={isOen} onClose={setIsOpen.off} />
     </div>
   );
 };

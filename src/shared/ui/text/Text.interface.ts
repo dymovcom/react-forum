@@ -46,7 +46,6 @@ const textPropVariant = [
   "ghost",
   "link",
   "linkMinor",
-  "primary",
   "secondary",
   "success",
   "warning",

@@ -64,6 +64,7 @@ module.exports = {
     ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-no-useless-fragment": "off",
   },
   globals: {
     JSX: true,

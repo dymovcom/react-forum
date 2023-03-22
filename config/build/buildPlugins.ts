@@ -7,6 +7,7 @@ import { IBuildOptions } from "./types/config";
 export const buildPlugins = ({
   paths,
   isDev,
+  apiURL,
 }: IBuildOptions): webpack.WebpackPluginInstance[] => {
   const plugins = [
     new webpack.ProgressPlugin(),
@@ -19,6 +20,7 @@ export const buildPlugins = ({
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
+      __API__: JSON.stringify(apiURL),
     }),
   ];
 

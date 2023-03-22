@@ -2,13 +2,17 @@ import { configureStore, ReducersMapObject } from "@reduxjs/toolkit";
 import { createReducerManager } from "app/providers/StoreProvider/config/reducerManager";
 import { counterReducer } from "entities/Counter";
 import { userReducer } from "entities/User";
+import { $api } from "shared/api";
 import { isDev } from "shared/lib/isDev";
 import { StateSchema } from "./StateSchema";
 
-export const createReduxStore = (
-  initialState?: StateSchema,
-  asyncReducers?: ReducersMapObject<StateSchema>,
-) => {
+interface CreateReduxStoreOptions {
+  initialState?: StateSchema;
+  asyncReducers?: ReducersMapObject<StateSchema>;
+}
+
+export const createReduxStore = (options?: CreateReduxStoreOptions) => {
+  const { initialState, asyncReducers } = options || {};
   const rootReducer: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     counter: counterReducer,
@@ -17,10 +21,18 @@ export const createReduxStore = (
 
   const reducerManager = createReducerManager(rootReducer);
 
-  const store = configureStore<StateSchema>({
+  const store = configureStore({
     reducer: reducerManager.reduce,
     devTools: isDev,
     preloadedState: initialState,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        thunk: {
+          extraArgument: {
+            api: $api,
+          },
+        },
+      }),
   });
 
   // @ts-ignore

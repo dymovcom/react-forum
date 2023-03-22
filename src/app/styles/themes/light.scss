@@ -1,0 +1,105 @@
+.light-theme {
+  // COLORS
+
+  // color-base
+  --color-base-base: #002033;
+  --color-base-essential: #ffffff;
+  --color-base-project: #0071b2;
+  --color-base-phantom: #004269;
+  --color-base-path: #0078d2;
+  --color-base-system: #ced8de;
+  --color-base-success: #22c38e;
+  --color-base-alert: #eb5757;
+  --color-base-warning: #f38b00;
+  --color-base-caution: #f2c94c;
+  --color-base-normal: #56b9f2;
+  --color-base-critical: #33000f;
+
+  // color-background
+  --color-bg-default: #ffffff;
+  --color-bg-secondary: #ecf1f4;
+  --color-bg-link: #0078d2;
+  --color-bg-brand: #0071b3;
+  --color-bg-normal: #56b9f2;
+  --color-bg-system: #dee4e8;
+  --color-bg-success: #22c38e;
+  --color-bg-caution: #f2c94c;
+  --color-bg-warning: #f38b00;
+  --color-bg-alert: #eb5757;
+  --color-bg-critical: #33000f;
+  --color-bg-stripe: rgb(0 32 51 / 5%);
+  --color-bg-tone: rgb(0 32 51 / 85%);
+  --color-bg-soft: rgb(255 255 255 / 90%);
+  --color-bg-border: rgb(0 65 102 / 20%);
+  --color-bg-ghost: rgb(0 32 51 / 8%);
+
+  // color-shadow
+  --color-nums-shadow: #002033;
+
+  // color-typo
+  --color-typo-primary: #002033;
+  --color-typo-secondary: rgb(0 32 51 / 60%);
+  --color-typo-brand: #0071b3;
+  --color-typo-ghost: rgb(0 32 51 / 30%);
+  --color-typo-link: #0078d2;
+  --color-typo-link-hover: #008efa;
+  --color-typo-link-minor: #1c5682;
+  --color-typo-system: #97b2c4;
+  --color-typo-normal: #32b4ff;
+  --color-typo-success: #09b37b;
+  --color-typo-warning: #eb6d00;
+  --color-typo-alert: #eb3333;
+  --color-typo-caution: #ffa10a;
+  --color-typo-critical: #33000f;
+
+  // color-control
+  // default control
+  --color-control-bg-default: #ffffff;
+  --color-control-bg-active: rgb(0 120 210 / 50%);
+  --color-control-bg-focus: rgb(0 120 210 / 30%);
+  --color-control-bg-border: rgb(0 66 105 / 28%);
+  --color-control-bg-border-focus: #0091ff;
+  --color-control-bg-border-hover: rgb(0 66 105 / 52%);
+  --color-control-typo: #002033;
+  --color-control-typo-placeholder: rgb(0 32 51 / 35%);
+
+  // primary control
+  --color-control-bg-primary: #0078d2;
+  --color-control-bg-primary-hover: #0091ff;
+  --color-control-typo-primary: #ffffff;
+  --color-control-typo-primary-hover: #ffffff;
+
+  // secondary control
+  --color-control-bg-secondary: #ffffff;
+  --color-control-bg-border-secondary: #0078d2;
+  --color-control-bg-border-secondary-hover: #0091ff;
+  --color-control-typo-secondary: #0078d2;
+  --color-control-typo-secondary-hover: #0091ff;
+
+  // ghost control
+  --color-control-bg-ghost: rgb(0 66 105 / 7%);
+  --color-control-bg-ghost-hover: rgb(0 66 105 / 5%);
+  --color-control-typo-ghost: rgb(0 57 92 / 80%);
+  --color-control-typo-ghost-hover: rgb(0 57 92 / 75%);
+
+  // clear control
+  --color-control-bg-clear: #ffffff;
+  --color-control-bg-clear-hover: rgb(0 66 105 / 5%);
+  --color-control-typo-clear: rgb(0 57 92 / 80%);
+  --color-control-typo-clear-hover: rgb(0 57 92 / 75%);
+
+  // disable control
+  --color-control-bg-disable: rgb(0 66 105 / 7%);
+  --color-control-bg-border-disable: #ffffff;
+  --color-control-typo-disable: rgb(0 32 51 / 26%);
+
+
+  // SHADOW
+  
+  --shadow-group: 0px 2px 2px rgb(0 32 51 / 2%),
+  0px 2px 8px rgb(0 32 51 / 16%);
+  --shadow-layer: 0px 4px 4px rgb(0 32 51 / 4%),
+  0px 8px 24px rgb(0 32 51 / 12%);
+  --shadow-modal: 0px 8px 8px rgb(0 32 51 / 4%),
+  0px 12px 28px rgb(0 32 51 / 12%);
+}

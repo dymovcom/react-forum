@@ -1,0 +1,102 @@
+.dark-theme {
+  // COLORS
+
+  // color-base
+  --color-base-base: #ffffff; 
+  --color-base-essential: #22272b;
+  --color-base-project: #0071b2;
+  --color-base-phantom: #f6fbfd;
+  --color-base-path: #0078d2;
+  --color-base-system: #4b5963;
+  --color-base-success: #22c38e;
+  --color-base-alert: #f54d4d;
+  --color-base-warning: #f38b00;
+  --color-base-caution: #f2c94c;
+  --color-base-normal: #0aa5ff;
+  --color-base-critical: #33000f;
+
+  // color-background
+  --color-bg-default: #22272b;
+  --color-bg-secondary: #161a1d;
+  --color-bg-link: #0078d2;
+  --color-bg-brand: #0071b2;
+  --color-bg-normal: #0ba5ff;
+  --color-bg-system: #4d525b;
+  --color-bg-success: #24c38e;
+  --color-bg-caution: #f2c94c;
+  --color-bg-warning: #f38b01;
+  --color-bg-alert: #ff4443;
+  --color-bg-critical: #33000f;
+  --color-bg-stripe: rgb(246 251 253 / 6%);
+  --color-bg-tone: rgb(12 17 19 / 85%);
+  --color-bg-soft: rgb(255 255 255 / 90%);
+  --color-bg-border: rgb(255 255 255 / 20%);
+  --color-bg-ghost: rgb(246 251 253 / 10%);
+
+  // color-shadow
+  --color-nums-shadow: rgb(#000000 / 50%);
+
+  // color-typo
+  --color-typo-primary: #fafafa;
+  --color-typo-secondary: rgb(255 255 255 / 60%);
+  --color-typo-brand: #0071b2;
+  --color-typo-ghost: rgb(255 255 255 / 30%);
+  --color-typo-link: #0f9fff;
+  --color-typo-link-hover: #6fa5c8;
+  --color-typo-link-minor: #57bcff;
+  --color-typo-system: #636e83;
+  --color-typo-normal: #009bf5;
+  --color-typo-success: #10ae79;
+  --color-typo-warning: #e68200;
+  --color-typo-alert: #f73b3b;
+  --color-typo-caution: #f8c735;
+  --color-typo-critical: #62001d;
+
+  // color-control
+  // default control
+  --color-control-bg-default: #22272b;
+  --color-control-bg-active: rgb(0 150 235 / 70%);
+  --color-control-bg-focus: rgb(0 150 235 / 40%);
+  --color-control-bg-border: rgb(246 251 253 / 28%);
+  --color-control-bg-border-focus: #0091e6;
+  --color-control-bg-border-hover: rgb(246 251 253 / 52%);
+  --color-control-typo: rgb(255 255 255 / 80%);
+  --color-control-typo-placeholder: rgb(255 255 255 / 35%);
+
+  // primary control
+  --color-control-bg-primary: #0078d2;
+  --color-control-bg-primary-hover: #0091ff;
+  --color-control-typo-primary: #ffffff;
+  --color-control-typo-primary-hover: #ffffff;
+
+  // secondary control
+  --color-control-bg-secondary: #22272b;
+  --color-control-bg-border-secondary: #0078d2;
+  --color-control-bg-border-secondary-hover: #0091ff;
+  --color-control-typo-secondary: #0f9fff;
+  --color-control-typo-secondary-hover: #57bcff;
+
+  // ghost control
+  --color-control-bg-ghost: rgb(250 250 250 / 16%);
+  --color-control-bg-ghost-hover: rgb(250 250 250 / 23%);
+  --color-control-typo-ghost: rgb(255 255 255 / 75%);
+  --color-control-typo-ghost-hover: rgb(255 255 255 / 90%);
+ 
+  // clear control
+  --color-control-bg-clear: #22272b;
+  --color-control-bg-clear-hover: rgb(250 250 250 / 23%);
+  --color-control-typo-clear: rgb(255 255 255 / 75%);
+  --color-control-typo-clear-hover: rgb(255 255 255 / 90%);
+
+  // disable control
+  --color-control-bg-disable: rgb(250 250 250 / 16%);
+  --color-control-bg-border-disable: #22272b;
+  --color-control-typo-disable: rgb(255 255 255 / 24%);
+
+
+  // SHADOW
+
+  --shadow-group: 0px 2px 2px rgb(0 0 0 / 8%), 0px 2px 12px rgb(0 0 0 / 32%);
+  --shadow-layer: 0px 4px 4px rgb(0 0 0 / 8%), 0px 8px 24px rgb(0 0 0 / 32%);
+  --shadow-modal: 0px 8px 8px rgb(0 0 0 / 8%), 0px 12px 28px rgb(0 0 0 / 32%);
+}

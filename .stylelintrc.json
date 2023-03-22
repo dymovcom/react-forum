@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-idiomatic-order"
+  ],
+  "rules": {
+    "color-hex-length": "long"
+  }
+}

@@ -1,0 +1,61 @@
+.icon {
+  display: inline-flex;
+  overflow: hidden;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.xs {
+  --icon-size: var(--graphics-size-xs);
+}
+
+.s {
+  --icon-size: var(--graphics-size-s);
+}
+
+.m {
+  --icon-size: var(--graphics-size-m);
+}
+
+.l {
+  --icon-size: var(--graphics-size-l);
+}
+
+.alert {
+  color: var(--color-typo-alert);
+}
+
+.brand {
+  color: var(--color-typo-brand);
+}
+
+.ghost {
+  color: var(--color-typo-ghost);
+}
+
+.link {
+  color: var(--color-typo-link);
+}
+
+.primary {
+  color: var(--color-typo-primary);
+}
+
+.secondary {
+  color: var(--color-typo-secondary);
+}
+
+.success {
+  color: var(--color-typo-success);
+}
+
+.warning {
+  color: var(--color-typo-warning);
+}
+
+.disabled {
+  color: var(--color-control-typo-disable);
+}

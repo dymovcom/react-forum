@@ -1,0 +1,15 @@
+{
+  "lang_switcher": "Переключить язык",
+  "main_link": "Главная",
+  "about_link": "О нас",
+  "profile_link": "Профиль",
+  "page_error": "Произошла непредвиденная ошибка",
+  "page_error_refresh_btn": "Обновить страницу",
+  "login_btn": "Войти",
+  "logout_btn": "Выйти",
+  "login_form_submit": "Войти",
+  "username_field_label": "Имя пользователя",
+  "password_field_label": "Пароль",
+  "login_form_title": "Авторизация",
+  "login_by_username_error": "Неверное имя пользователя или пароль"
+}

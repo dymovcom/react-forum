@@ -1,0 +1,62 @@
+.loader {
+  --background-color: var(
+                  --loader-background-color,
+                  var(--color-control-bg-primary)
+  );
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: calc(100% - var(--loader-size));
+  transform: translate(-50%, -50%);
+
+  &::before {
+    position: absolute;
+    top: calc(50% - (var(--loader-size) * 0.5));
+    left: calc(50% - (var(--loader-size) * 2.5));
+    width: var(--loader-size);
+    height: var(--loader-size);
+    border-radius: 50%;
+    animation: loader 1s ease infinite;
+    background: var(--background-color);
+    content: '';
+  }
+
+  &::after {
+    position: absolute;
+    top: calc(50% - (var(--loader-size) * 0.5));
+    left: calc(50% + (var(--loader-size) * 1.5));
+    width: var(--loader-size);
+    height: var(--loader-size);
+    border-radius: 50%;
+    animation: loader 1s -0.36s ease infinite;
+    background: var(--background-color);
+    content: '';
+  }
+}
+
+.dot {
+  position: absolute;
+  top: calc(50% - (var(--loader-size) * 0.5));
+  left: calc(50% - (var(--loader-size) * 0.5));
+  width: var(--loader-size);
+  height: var(--loader-size);
+  border-radius: 50%;
+  animation: loader 1s -0.18s ease infinite;
+  background: var(--background-color);
+}
+
+.s {
+  --loader-size: 4px;
+}
+
+.m {
+  --loader-size: 8px;
+}
+
+@keyframes loader {
+  50% {
+    transform: scale(1.5);
+  }
+}

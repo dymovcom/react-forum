@@ -1,0 +1,15 @@
+{
+  "lang_switcher": "Switch language",
+  "main_link": "Main page",
+  "about_link": "About as",
+  "profile_link": "Profile",
+  "page_error": "An unexpected error has occurred",
+  "page_error_refresh_btn": "Refresh the page",
+  "login_btn": "Login",
+  "logout_btn": "Logout",
+  "login_form_submit": "Login",
+  "username_field_label": "Username",
+  "password_field_label": "Password",
+  "login_form_title": "Authorization",
+  "login_by_username_error": "The username or password you entered is incorrect"
+}

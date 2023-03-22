@@ -1,0 +1,34 @@
+.link {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 0 20px;
+  margin: 4px;
+  transition: all 0.2s cubic-bezier(.215,.61,.355,1);
+  white-space: nowrap;
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  &-text {
+    overflow: hidden;
+    flex: auto;
+    margin-left: 16px;
+    opacity: 1;
+    text-overflow: ellipsis;
+    transition: opacity 0.4s cubic-bezier(.645,.045,.355,1);
+  }
+}
+
+.collapsed {
+  &.link {
+    padding-inline: calc(50% - 12px);
+
+    &-text {
+      opacity: 0;
+    }
+  }
+}

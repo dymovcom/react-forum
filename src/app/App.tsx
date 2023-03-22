@@ -11,7 +11,9 @@ export const App = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    const userData = JSON.parse(localStorage.getItem(USER_LOCALSTORAGE_KEY));
+    const userData = JSON.parse(
+      localStorage.getItem(USER_LOCALSTORAGE_KEY) || "",
+    );
     if (userData) {
       dispatch(userActions.setAuthData(userData));
     }

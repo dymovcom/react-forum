@@ -5,6 +5,7 @@ import {
   IconComponent,
   IconProps,
   iconPropSizeDefault,
+  iconPropVariantDefault,
 } from "./Icon.interface";
 import classes from "./Icon.module.scss";
 
@@ -14,7 +15,7 @@ export const Icon: IconComponent = forwardRef<HTMLSpanElement, IconProps>(
       children,
       className,
       size = iconPropSizeDefault,
-      variant,
+      variant = iconPropVariantDefault,
       ...otherProps
     } = props;
     return (

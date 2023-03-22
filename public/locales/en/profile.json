@@ -1,3 +1,7 @@
 {
-  "text": "Profile page"
+  "text": "Profile page",
+  "profile": "Profile",
+  "edit_btn": "Edit",
+  "firstname": "Firstname:",
+  "lastname": "Lastname:"
 }

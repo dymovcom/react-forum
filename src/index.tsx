@@ -7,7 +7,7 @@ import { ThemeProvider } from "app/providers/ThemeProvider";
 import "shared/config/i18n/i18n";
 
 const container = document.getElementById("root");
-const root = createRoot(container);
+const root = createRoot(container as HTMLElement);
 root.render(
   <BrowserRouter>
     <StoreProvider>

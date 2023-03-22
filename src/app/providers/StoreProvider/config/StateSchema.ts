@@ -29,7 +29,7 @@ export interface ReducerManager {
   remove: (key: StateSchemaKey) => void;
 }
 
-export type ReducerList = {
+export type ReducersList = {
   [name in StateSchemaKey]?: Reducer;
 };
 

@@ -30,5 +30,13 @@
       "password": "admin"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "firstname": "Антон",
+    "lastname": "Дымов",
+    "age": 30,
+    "currency": "RUB",
+    "country": "Россия",
+    "username": "dymovcom",
+    "avatar": "https://images.unsplash.com/photo-1494959764136-6be9eb3c261e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+  }
 }

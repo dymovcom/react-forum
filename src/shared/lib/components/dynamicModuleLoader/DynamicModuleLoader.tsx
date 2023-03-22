@@ -1,17 +1,14 @@
-import { Reducer } from "@reduxjs/toolkit";
 import { ReduxStoreWithManager } from "app/providers/StoreProvider";
 import {
-  ReducerList,
+  ReducersList,
   StateSchemaKey,
 } from "app/providers/StoreProvider/config/StateSchema";
 import { FC, ReactNode, useEffect } from "react";
 import { useStore } from "react-redux";
 import { useAppDispatch } from "shared/hooks/useAppDispatch";
 
-type ReducerListEntry = [StateSchemaKey, Reducer];
-
 interface DynamicModuleLoaderProps {
-  reducers: ReducerList;
+  reducers: ReducersList;
   removeAfterUnmount?: boolean;
   children: ReactNode;
 }
@@ -23,17 +20,17 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    Object.entries(reducers).forEach(([name, reducer]: ReducerListEntry) => {
-      if (!store.getState()[name]) {
-        store.reducerManager.add(name, reducer);
+    Object.entries(reducers).forEach(([name, reducer]) => {
+      if (!store.getState()[name as StateSchemaKey]) {
+        store.reducerManager.add(name as StateSchemaKey, reducer);
         dispatch({ type: `@INIT ${name} reducer` });
       }
     });
 
     return () => {
       if (removeAfterUnmount) {
-        Object.entries(reducers).forEach(([name]: ReducerListEntry) => {
-          store.reducerManager.remove(name);
+        Object.entries(reducers).forEach(([name]) => {
+          store.reducerManager.remove(name as StateSchemaKey);
           dispatch({ type: `@DESTROY ${name} reducer` });
         });
       }

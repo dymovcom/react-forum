@@ -1,4 +1,4 @@
-import { ReducerList } from "app/providers/StoreProvider/config/StateSchema";
+import { ReducersList } from "app/providers/StoreProvider/config/StateSchema";
 import { FC, memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import { useAppDispatch } from "shared/hooks/useAppDispatch";
 import { DynamicModuleLoader } from "shared/lib/components/dynamicModuleLoader/DynamicModuleLoader";
 import { Button } from "shared/ui/Button";
 import { Text } from "shared/ui/Text";
-import { TextField } from "shared/ui/TextField";
+import { TextField, TextFieldOnChange } from "shared/ui/TextField";
 import { getLoginUsername } from "../../model/selectors/getLoginUsername";
 import { getLoginPassword } from "../../model/selectors/getLoginPassword";
 import { getLoginError } from "../../model/selectors/getLoginError";
@@ -15,7 +15,7 @@ import { loginByUsername } from "../../model/services/loginByUsername/loginByUse
 import { loginActions, loginReducer } from "../../model/slice/loginSlice";
 import classes from "./LoginForm.module.scss";
 
-const initialReducers: ReducerList = {
+const initialReducers: ReducersList = {
   loginForm: loginReducer,
 };
 
@@ -33,16 +33,20 @@ const LoginFormComponent: FC<LoginFormProps> = (props) => {
   const isLoading = useSelector(getLoginIsLoading);
   const error = useSelector(getLoginError);
 
-  const usernameChangeHandler = useCallback(
-    ({ value }: { value: string }) => {
-      dispatch(loginActions.setUsername(value));
+  const usernameChangeHandler: TextFieldOnChange = useCallback(
+    ({ value }) => {
+      if (value) {
+        dispatch(loginActions.setUsername(value));
+      }
     },
     [dispatch],
   );
 
-  const passwordChangeHandler = useCallback(
-    ({ value }: { value: string }) => {
-      dispatch(loginActions.setPassword(value));
+  const passwordChangeHandler: TextFieldOnChange = useCallback(
+    ({ value }) => {
+      if (value) {
+        dispatch(loginActions.setPassword(value));
+      }
     },
     [dispatch],
   );
@@ -62,7 +66,7 @@ const LoginFormComponent: FC<LoginFormProps> = (props) => {
           {t("login_form_title")}
         </Text>
         <TextField
-          label={t("username_field_label")}
+          label={t("username_field_label") as string}
           required
           autoFocus
           value={username}
@@ -70,7 +74,7 @@ const LoginFormComponent: FC<LoginFormProps> = (props) => {
         />
         <TextField
           type="password"
-          label={t("password_field_label")}
+          label={t("password_field_label") as string}
           required
           value={password}
           onChange={passwordChangeHandler}

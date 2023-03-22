@@ -58,7 +58,7 @@ export interface TextFieldOnChangeArguments {
   value: TextFieldPropValue;
 }
 
-export type TextFieldPropOnChange = (args: TextFieldOnChangeArguments) => void;
+export type TextFieldOnChange = (args: TextFieldOnChangeArguments) => void;
 
 export type TextFieldPropRightSide<TYPE extends string> = TYPE extends
   | "password"
@@ -73,7 +73,7 @@ export type TextFieldProps<TYPE extends string> = PropsWithHTMLAttributes<
   {
     className?: string;
     value?: TextFieldPropValue;
-    onChange?: TextFieldPropOnChange;
+    onChange?: TextFieldOnChange;
     id?: TextFieldPropId;
     name?: TextFieldPropName;
     type?: TYPE;

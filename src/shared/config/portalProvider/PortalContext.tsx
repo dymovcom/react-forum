@@ -8,19 +8,19 @@ import {
   useState,
 } from "react";
 
-interface IPortalContext {
+interface PortalContext {
   refs: RefObject<HTMLElement>[];
   addRefs?: (ref: RefObject<HTMLElement>[]) => void;
   zIndex?: number;
 }
 
-const Context = createContext<IPortalContext>({
+const Context = createContext<PortalContext>({
   refs: [],
   zIndex: undefined,
 });
 
 export const usePortalContext = () => {
-  return useContext<IPortalContext>(Context);
+  return useContext<PortalContext>(Context);
 };
 
 interface PortalProviderProps {

@@ -16,11 +16,13 @@ const iconPropVariant = [
   "warning",
   "disabled",
 ] as const;
-type IconPropView = (typeof iconPropVariant)[number];
+type IconPropVariant = (typeof iconPropVariant)[number];
+
+export const iconPropVariantDefault = iconPropVariant[0];
 
 export type IconProps = PropsWithHTMLAttributesAndRef<
   {
-    variant?: IconPropView;
+    variant?: IconPropVariant;
     size?: IconPropSize;
   },
   HTMLSpanElement

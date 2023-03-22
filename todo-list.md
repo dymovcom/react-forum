@@ -19,6 +19,8 @@
 - [ ] **FieldCaption**
   - [ ] type check
 
+- [ ] **Add Space component**
+
 ## Common
 - [x] bring the names of files and folders to the same form
 ---

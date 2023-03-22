@@ -1,5 +1,5 @@
 export const classNames = (
-  ...params: (string | Record<string, boolean>)[]
+  ...params: (string | Record<string, boolean | undefined> | undefined)[]
 ): string => {
   const classes: string[] = [];
 

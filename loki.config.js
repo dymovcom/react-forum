@@ -12,4 +12,5 @@ module.exports = {
       preset: "iPhone 7",
     },
   },
+  fetchFailIgnore: ".*",
 };

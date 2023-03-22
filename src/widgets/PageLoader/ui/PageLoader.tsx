@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Loader } from "shared/ui/loader/Loader";
+import { Loader } from "shared/ui/Loader/Loader";
 import classes from "./PageLoader.module.scss";
 
 export const PageLoader: FC = () => (

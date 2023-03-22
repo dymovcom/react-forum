@@ -19,9 +19,8 @@ import { IconEye } from "shared/ui/icons/iconEye";
 import { IconEyeClose } from "shared/ui/icons/iconEyeClose";
 import { classNames } from "shared/lib/classNames";
 import { getByMap } from "shared/lib/getByMap";
-import { FieldCaption } from "shared/ui/fieldCaption";
-import { FieldLabel } from "shared/ui/fieldLabel";
-import { sizeMap } from "shared/ui/textField/helpers";
+import { FieldCaption } from "shared/ui/FieldCaption";
+import { FieldLabel } from "shared/ui/FieldLabel";
 import {
   TextFieldComponent,
   textFieldPropFormDefault,
@@ -29,7 +28,8 @@ import {
   TextFieldProps,
   textFieldPropSizeDefault,
   textFieldPropVariantDefault,
-} from "shared/ui/textField/TextField.interface";
+} from "./TextField.interface";
+import { sizeMap } from "./helpers";
 import classes from "./TextField.module.scss";
 
 const getTypeForRender = (type: string, passwordVisible: boolean) => {

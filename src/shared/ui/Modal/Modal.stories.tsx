@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { useState } from "react";
-import { Button } from "shared/ui/button";
+import { Button } from "shared/ui/Button";
 import { Modal } from "./Modal";
 
 export default {

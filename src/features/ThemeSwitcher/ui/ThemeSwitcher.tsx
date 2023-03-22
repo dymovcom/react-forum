@@ -3,7 +3,7 @@ import { FC, memo } from "react";
 import { classNames } from "shared/lib/classNames";
 import MoonIcon from "shared/assets/icons/moon-icon.svg";
 import SunIcon from "shared/assets/icons/sun-icon.svg";
-import { Button } from "shared/ui/button";
+import { Button } from "shared/ui/Button";
 
 interface ThemeSwitcherProps {
   className?: string;

@@ -1,10 +1,10 @@
-import { userActions } from "entities/user";
+import { userActions } from "entities/User";
 import { Suspense, useEffect } from "react";
 import { AppRouter } from "app/providers/router";
 import { USER_LOCALSTORAGE_KEY } from "shared/const/localstorage";
 import { useAppDispatch } from "shared/hooks/useAppDispatch";
-import { Header } from "widgets/header";
-import { Sidebar } from "widgets/sidebar";
+import { Header } from "widgets/Header";
+import { Sidebar } from "widgets/Sidebar";
 import "./styles/index.scss";
 
 export const App = () => {

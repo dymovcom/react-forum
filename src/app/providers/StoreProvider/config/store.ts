@@ -1,11 +1,7 @@
-import {
-  configureStore,
-  DeepPartial,
-  ReducersMapObject,
-} from "@reduxjs/toolkit";
+import { configureStore, ReducersMapObject } from "@reduxjs/toolkit";
 import { createReducerManager } from "app/providers/StoreProvider/config/reducerManager";
-import { counterReducer } from "entities/counter";
-import { userReducer } from "entities/user";
+import { counterReducer } from "entities/Counter";
+import { userReducer } from "entities/User";
 import { isDev } from "shared/lib/isDev";
 import { StateSchema } from "./StateSchema";
 

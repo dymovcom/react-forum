@@ -12,7 +12,7 @@ import { usePortalContext } from "shared/config/portalProvider/PortalContext";
 import { useGlobalKeys } from "shared/hooks/useGlobalKeys/useGlobalKeys";
 import { classNames } from "shared/lib/classNames";
 import { useClickOutside } from "shared/hooks/useClickOutside";
-import { Portal } from "shared/ui/portal";
+import { Portal } from "shared/ui/Portal";
 import classes from "./Modal.module.scss";
 
 const modalPropPosition = ["center", "top"] as const;

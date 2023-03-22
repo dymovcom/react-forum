@@ -1,8 +1,8 @@
 import { FC, memo, useCallback, useState } from "react";
 import { classNames } from "shared/lib/classNames";
-import { Button } from "shared/ui/button";
-import { sidebarItemsList } from "widgets/sidebar/model/items";
-import { SidebarItem } from "widgets/sidebar/ui/SidebarItem/SidebarItem";
+import { Button } from "shared/ui/Button";
+import { sidebarItemsList } from "../../model/items";
+import { SidebarItem } from "../SidebarItem/SidebarItem";
 import classes from "./Sidebar.module.scss";
 
 const SidebarComponent: FC = () => {

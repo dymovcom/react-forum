@@ -3,13 +3,13 @@
 import { FC, memo, MouseEvent } from "react";
 import { classNames } from "shared/lib/classNames";
 import { forwardRefWithAs } from "shared/lib/forwardRefWithAs";
+import { Loader } from "shared/ui/Loader";
 import {
   buttonPropFormDefault,
   ButtonProps,
   buttonPropSizeDefault,
   buttonPropVariantDefault,
-} from "shared/ui/button/Button.interface";
-import { Loader } from "shared/ui/loader";
+} from "./Button.interface";
 import classes from "./Button.module.scss";
 
 const ButtonComponent: FC<ButtonProps> = forwardRefWithAs<

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { classNames } from "shared/lib/classNames";
 import { forwardRefWithAs } from "shared/lib/forwardRefWithAs";
-import { Text } from "shared/ui/text";
+import { Text } from "shared/ui/Text";
 import classes from "./FieldLabel.module.scss";
 
 type FieldLabelPropSize = "xs" | "s" | "m" | "l";

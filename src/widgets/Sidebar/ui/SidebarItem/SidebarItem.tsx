@@ -1,7 +1,7 @@
 import { FC, memo } from "react";
 import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames";
-import { AppLink } from "shared/ui/appLink";
+import { AppLink } from "shared/ui/AppLink";
 import { ISidebarItem } from "widgets/sidebar/model/items";
 import classes from "./SidebarItem.module.scss";
 

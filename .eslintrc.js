@@ -43,7 +43,6 @@ module.exports = {
     "no-shadow": "off",
     "no-underscore-dangle": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
-    // "max-len": ["error", { code: 80, ignoreComments: true }],
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -82,7 +81,7 @@ module.exports = {
       rules: { "no-param-reassign": ["error", { props: false }] },
     },
     {
-      files: ["src/shared/icons/**/*"],
+      files: ["src/shared/ui/icons/**/*"],
       rules: { "react/jsx-props-no-spreading": "off" },
     },
   ],

@@ -1,5 +1,5 @@
-import { getUserAuthData, userActions } from "entities/user";
-import { LoginModal } from "features/authByUsername";
+import { getUserAuthData, userActions } from "entities/User";
+import { LoginModal } from "features/AuthByUsername";
 import { FC, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
@@ -8,10 +8,10 @@ import { USER_LOCALSTORAGE_KEY } from "shared/const/localstorage";
 import { useAppDispatch } from "shared/hooks/useAppDispatch";
 import { useFlag } from "shared/hooks/useFlag/useFlag";
 import { classNames } from "shared/lib/classNames";
-import { LangSwitcher } from "features/langSwitcher";
-import { ThemeSwitcher } from "features/themeSwitcher";
-import { AppLink } from "shared/ui/appLink";
-import { Button } from "shared/ui/button";
+import { LangSwitcher } from "features/LangSwitcher";
+import { ThemeSwitcher } from "features/ThemeSwitcher";
+import { AppLink } from "shared/ui/AppLink";
+import { Button } from "shared/ui/Button";
 import classes from "./Header.module.scss";
 
 interface HeaderProps {
